@@ -5,5 +5,6 @@ import { paginationFromQueryMiddleware } from '../../../middlewares/paginationFr
 const router = Router();
 
 router.get('/', paginationFromQueryMiddleware, UserController.getAllUsers);
+router.delete('/:userId/groups/:groupId', UserController.removeFromGroup);
 
 export default router;
